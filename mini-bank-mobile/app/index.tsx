@@ -1,6 +1,12 @@
-import { Redirect } from "expo-router";
-import React from "react";
+import { Href, Redirect } from "expo-router";
+import React, { useEffect } from "react";
+import { View } from "react-native";
 
-export default function index() {
-  return <Redirect href={{ pathname: "auth/login" }} />;
+export default function Index() {
+  useEffect(() => {}, []);
+  return (
+    <View>
+      <Redirect href={"/(auth)" as Href} />
+    </View>
+  );
 }
