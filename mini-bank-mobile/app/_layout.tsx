@@ -11,6 +11,9 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+        PoppinsSemiBold: require("@/assets/fonts/Poppins-SemiBold.otf"),
+        PoppinsMedium: require("@/assets/fonts/Poppins-Medium.otf"),
+
   });
 
   if (!loaded) {
@@ -23,6 +26,8 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <Stack>
           <Stack.Screen name="index" />
+          <Stack.Screen name="account" options={{ headerShown: false }}  />
+
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" />
           <Stack.Screen name="+not-found" />
